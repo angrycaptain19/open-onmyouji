@@ -99,11 +99,10 @@ def findSimilarestPictureWith(Circles, images, ExpectImage):
     # potentialPoints.sort(key=operator.itemgetter(2), reverse=True)
     potentialPoints.sort(key=lambda _tuple: _tuple[2])
     print(potentialPoints)
-    if len(potentialPoints) == 0:
+    if not potentialPoints:
         return 0, 0
-    else:
-        ChosenPoint = potentialPoints[0]
-        return ChosenPoint[0], ChosenPoint[1]
+    ChosenPoint = potentialPoints[0]
+    return ChosenPoint[0], ChosenPoint[1]
 
 
 def processImage(image):
